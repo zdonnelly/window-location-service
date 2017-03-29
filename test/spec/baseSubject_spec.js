@@ -39,7 +39,7 @@ describe('Subject.removeObserver()', () => {
         const o = {};
         expect(() => {
             s.removeObserver(o);
-        }).toThrowError();
+        }).toThrowError(TypeError);
     });
     it('should decrement the observer count after being called', () => {
         const s = new Subject();
